@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Poe-like AI Chat</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/themes.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+</head>
+<body class="light-theme">
+    <header>
+        <h1>Poe-like AI Chat</h1>
+        <button id="theme-toggle">🌙</button>
+    </header>
+
+    <main>
+        <div id="chat-container">
+            <!-- Les messages de chat seront ajoutés ici dynamiquement -->
+        </div>
+        <div id="input-container">
+            <input type="text" id="user-input" placeholder="Posez votre question...">
+            <button id="send-btn">Envoyer</button>
+        </div>
+    </main>
+
+    <footer>
+        <p>Powered by DeepSeek, Claude, Bard, etc.</p>
+    </footer>
+
+    <script src="scripts/storage.js"></script>
+    <script src="scripts/api.js"></script>
+    <script src="scripts/main.js"></script>
+</body>
+</html>

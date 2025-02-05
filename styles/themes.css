@@ -1,0 +1,39 @@
+/* Thème clair (par défaut) */
+.light-theme {
+    background-color: white;
+    color: black;
+}
+
+.light-theme header {
+    background-color: #007bff;
+    color: white;
+}
+
+.light-theme #input-container {
+    background-color: #f9f9f9;
+}
+
+/* Thème sombre */
+.dark-theme {
+    background-color: #121212;
+    color: white;
+}
+
+.dark-theme header {
+    background-color: #1f1f1f;
+    color: white;
+}
+
+.dark-theme #input-container {
+    background-color: #1f1f1f;
+}
+
+.dark-theme #user-input {
+    background-color: #333;
+    color: white;
+    border-color: #444;
+}
+
+.dark-theme #send-btn {
+    background-color: #555;
+}
