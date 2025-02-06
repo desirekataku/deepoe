@@ -49,3 +49,31 @@ function addMessage(sender, message) {
     chatContainer.appendChild(messageElement);
     chatContainer.scrollTop = chatContainer.scrollHeight;
 }
+
+async function callAIAPI(userMessage) {
+    // Choisissez l'API à appeler
+    const apiToCall = 'deepseek'; // Ou 'claude', 'bard', etc.
+
+    switch (apiToCall) {
+        case 'deepseek':
+            return await callDeepSeekAPI(userMessage);
+        case 'claude':
+            return await callClaudeAPI(userMessage);
+        case 'bard':
+            return await callBardAPI(userMessage);
+        default:
+            return "API non reconnue.";
+    }
+}
+
+
+function speakText(text) {
+    const synth = window.speechSynthesis;
+    const utterance = new SpeechSynthesisUtterance(text);
+    synth.speak(utterance);
+}
+
+// Appeler cette fonction après avoir reçu une réponse de l'IA
+const aiResponse = await callAIAPI(userMessage);
+addMessage('ai', aiResponse);
+speakText(aiResponse); // Lire la réponse à voix haute
